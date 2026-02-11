@@ -22,6 +22,7 @@ def lista_duplicados(lista):
 def encontrar_duplicados_eficiente(lista):
     conteo = {}
     duplicados = []
+    lista_no_duplicados = []
 
     for elem in lista:
         # Creamos una "llave" única que combina valor y tipo
@@ -34,8 +35,12 @@ def encontrar_duplicados_eficiente(lista):
         # Si es la segunda vez que lo vemos, lo mandamos a la lista de duplicados
         if conteo[llave] == 2:
             duplicados.append(elem)
+        
+        # Saco los elementos que aparecen por primera vez
+        if conteo[llave] == 1:
+            lista_no_duplicados.append(elem)
             
-    return duplicados
+    return duplicados, lista_no_duplicados
 
 # Esta no funciona con booleanos
 def encontrar_duplicados(lista):
@@ -53,7 +58,7 @@ def encontrar_duplicados(lista):
     return duplicados
 
 lista = [1, 2, 3, 1, 4, 2, 6, 7]
-lista_2 = [1, "casa", "barco", True, 2, 1, False, True, "casa"]
+lista_2 = [1, "casa", "barco", True, 2, 1, False, True, 1, "casa"]
 
 #print(lista_duplicados(lista))
 #print(lista_duplicados(lista_2))

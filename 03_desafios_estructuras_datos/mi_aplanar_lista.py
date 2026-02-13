@@ -2,7 +2,7 @@ def aplanar_lista(lista):
     lista_plana = []
 
     for elem in lista:
-        if isinstance(elem, list): #Mas profesiona. elem es lista y se comporta como lista
+        if isinstance(elem, list): #Mas profesional. elem es lista y se comporta como lista
         #if type(elem) == list: #elem es de tipo lista
             lista_plana.extend(elem)
         else:

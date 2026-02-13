@@ -1,0 +1,5 @@
+def aplanar_lista(lista)
+
+
+lista_1 = [1, 2, [1, 2, 3], 3, 5, 7]
+lista_2 = [1, True, "casa", ["Pedro", False, "Luis", 2], 1, "Jaime"]
